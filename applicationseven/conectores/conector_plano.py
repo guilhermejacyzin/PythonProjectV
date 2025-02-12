@@ -7,7 +7,10 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
+#   Importa uma classe tipo Plano
 from applicationseven.classes.plano import TipoPlano
+
+#   Importa o arquivo run_sql
 from applicationseven.database.run_sql import run_sql
 
 
