@@ -7,10 +7,10 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
-#   Importa uma classe tipo Plano
+#   No módulo plano importamos a classe TipoPlano
 from applicationseven.classes.plano import TipoPlano
 
-#   Importa o arquivo run_sql
+#   No módulo database, no módulo run_sql - importamos a função run_sql
 from applicationseven.database.run_sql import run_sql
 
 
@@ -19,6 +19,7 @@ def get_all():
 
     tipos_planos = []
 
+    # retornando todos os dados em TB_PLANOS
     sql = "SELECT * FROM webuser.TB_PLANOS"
     results = run_sql(sql)
 
