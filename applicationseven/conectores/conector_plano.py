@@ -1,7 +1,6 @@
 # Módulo de conexão entre a classe e o banco de dados
 
 
-
 # Imports
 import sys
 import os
