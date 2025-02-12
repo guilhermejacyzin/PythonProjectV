@@ -3,9 +3,9 @@
 # Imports
 from flask import render_template, request, redirect
 from flask import Blueprint
-from classes.membro import Membro
-import conectores.conector_membro as conector_membro
-import conectores.conector_plano as conector_plano
+from applicationseven.classes.membro import Membro
+import applicationseven.conectores.conector_membro as conector_membro
+import applicationseven.conectores.conector_plano as conector_plano
 
 
 # Cria o blueprint (instância da classe)
