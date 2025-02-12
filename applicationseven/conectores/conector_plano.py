@@ -23,10 +23,13 @@ def get_all():
     sql = "SELECT * FROM webuser.TB_PLANOS"
     results = run_sql(sql)
 
+    # para cada linha em resultados
     for row in results:
+        # tipo_plano recebe a linha plano e a liinha id
         tipo_plano = TipoPlano(row["plano"], row["id"])
+        # adiciona em tipos_planos
         tipos_planos.append(tipo_plano)
-
+    # retorna tipos_planos
     return tipos_planos
 
 
