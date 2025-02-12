@@ -6,6 +6,8 @@ from applicationseven.database.run_sql import run_sql
 from applicationseven.classes.instrutor import Instrutor
 from applicationseven.classes.atividade import Atividade
 
+"""Cada atividade está ligada a um instrutor"""
+
 
 # Função para listar todos os instrutores
 def get_all():

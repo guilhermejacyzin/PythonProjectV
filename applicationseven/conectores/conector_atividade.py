@@ -7,6 +7,10 @@ from applicationseven.database.run_sql import run_sql
 from applicationseven.classes.atividade import Atividade
 from applicationseven.classes.membro import Membro
 
+"""Cada atividade está ligada a um membro"""
+"""Cada plano está associado a uma atividade"""
+
+
 
 # Listar todas as atividades
 def get_all():
@@ -38,7 +42,9 @@ def get_members(id):
 
     membros = []
 
-    sql = "SELECT membros.* FROM webuser.TB_MEMBROS INNER JOIN webuser.TB_AGENDAMENTOS ON membros.id = webuser.TB_AGENDAMENTOS.membro WHERE webuser.TB_AGENDAMENTOS.atividade = %s"
+    sql = ("SELECT membros.* FROM webuser.TB_MEMBROS "
+           "INNER JOIN webuser.TB_AGENDAMENTOS ON membros.id = webuser.TB_AGENDAMENTOS.membro "
+           "WHERE webuser.TB_AGENDAMENTOS.atividade = %s")
     value = [id]
 
     results = run_sql(sql, value)
