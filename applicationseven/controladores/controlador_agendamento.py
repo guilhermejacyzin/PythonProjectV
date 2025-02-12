@@ -3,11 +3,11 @@
 # Imports
 from flask import render_template, request, redirect
 from flask import Blueprint
-from classes.agendamento import Agendamento
-import conectores.conector_agendamento as conector_agendamento
-import conectores.conector_membro as conector_membro
-import conectores.conector_atividade as conector_atividade
-import conectores.conector_plano as conector_plano
+from applicationseven.classes.agendamento import Agendamento
+import applicationseven.conectores.conector_agendamento as conector_agendamento
+import applicationseven.conectores.conector_membro as conector_membro
+import applicationseven.conectores.conector_atividade as conector_atividade
+import applicationseven.conectores.conector_plano as conector_plano
 
 
 # Cria o blueprint (instância da classe)

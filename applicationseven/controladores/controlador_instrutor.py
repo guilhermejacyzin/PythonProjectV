@@ -3,8 +3,8 @@
 # Imports
 from flask import render_template, request, redirect
 from flask import Blueprint
-from classes.instrutor import Instrutor
-import conectores.conector_instrutor as conector_instrutor
+from applicationseven.classes.instrutor import Instrutor
+import applicationseven.conectores.conector_instrutor as conector_instrutor
 
 
 # Cria o blueprint (instância da classe)
@@ -24,7 +24,7 @@ def novo_instrutor():
     return render_template("instrutores/novo.html", title = "Novo Instrutor")
 
 
-# Método para envio dos dados de um novo instrutor via POST
+# Metodo para envio dos dados de um novo instrutor via POST
 @instrutores_blueprint.route("/instrutores", methods = ["POST"])
 def cria_instrutor():
     nome = request.form["nome"]
@@ -44,7 +44,7 @@ def edita_instrutor(id):
     return render_template("/instrutores/editar.html", instrutor = instrutor, title = "Editar Detalhes do Instrutor")
 
 
-# Método para envio dos dados de alteração de um instrutor via POST
+# Metodo para envio dos dados de alteração de um instrutor via POST
 @instrutores_blueprint.route("/instrutores/<id>", methods = ["POST"])
 def atualiza_instrutor(id):
     nome = request.form["nome"]
